@@ -2,6 +2,17 @@ import { Bot } from "./bot";
 import { loadConfig } from "./config";
 import { DefaultTokenStorage } from "./token-storage";
 
+// --- HUGGING FACE HEALTH CHECK SERVER START ---
+// Hugging Face'in "Starting" durumunda takılmasını önlemek için 7860 portunu açıyoruz.
+Bun.serve({
+  port: 7860,
+  fetch(req) {
+    return new Response("Steam Hour Booster is Running! 🚀");
+  },
+});
+console.info("Health check server is live on port 7860");
+// --- HUGGING FACE HEALTH CHECK SERVER END ---
+
 console.info("Starting Steam Hour Booster");
 
 const configPath = Bun.env["CONFIG_PATH"] ?? "./config.json";
@@ -20,6 +31,5 @@ for (const entry of config) {
 		ts,
 		entry.online,
 	);
-
 	await bot.login();
 }
