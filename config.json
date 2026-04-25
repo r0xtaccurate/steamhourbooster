@@ -1,8 +1,8 @@
 [
   {
-    "username": "blads1948",
-    "password": "12345678Qwe_R123",
+    "username": "SECRET_USER",
+    "password": "SECRET_PASSWORD",
     "online": true,
-    "games": [480, 730, 578080, 1599600, 412220, 613100, 503560, 823130, 700330, 291550]
+    "games": []
   }
 ]
