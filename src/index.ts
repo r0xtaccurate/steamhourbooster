@@ -45,7 +45,7 @@ try {
     const ts = new DefaultTokenStorage(tokenStorageDir);
     
     // Oyun ID'leri (Dizi olarak düzeltildi)
-    const games = [480, 730, 578080, 1599600, 412220, 613100, 503560, 823130, 700330, 291550, 3678970]; 
+    const games = [480, 730, 578080, 1905180, 4252340, 552990, 2767030, 570, 440, 2073850, 389430, 550900, 438100, 761890, 766570, 380600, 3354750, 3678970]; 
 
     const bot = new Bot(
         username,
